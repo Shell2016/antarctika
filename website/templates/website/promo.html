@@ -1,0 +1,7 @@
+<h1>{{ promo.title }}</h1>
+{% for promoitem in promo.promoitem_set.all %}
+   <p><b>{{ promoitem.name }}:  </b>{{ promoitem.text }}</p>
+{% endfor %}
+<h2>{{ promo.content_title }}</h2>
+{{ promo.content_text|safe }}
+<p>{{ promo.footer_text }}</p>
